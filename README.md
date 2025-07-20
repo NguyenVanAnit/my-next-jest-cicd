@@ -1,43 +1,33 @@
-# Next.js + Jest
+# 🚀 Deployment Success Next.js + Jest + CI/CD
 
-This example shows how to configure Jest to work with Next.js.
+Dự án **Next.js + Jest Example** đã được triển khai thành công thông qua **GitHub Actions CI/CD pipeline**.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript. This example also shows how to use Jest with the App Router and React Server Components.
+## ✅ Thông tin chi tiết
 
-> **Note:** Since tests can be co-located alongside other files inside the App Router, we have placed those tests in `app/` to demonstrate this behavior (which is different than `pages/`). You can still place all tests in `__tests__` if you prefer.
+- **CI/CD**: Tự động kiểm tra (test), build, và deploy sau mỗi lần push.
+- 🛠 **Tech Stack**:
+  - Next.js
+  - TypeScript
+  - Jest (unit testing)
+  - GitHub Actions
+- 🌐 **Link production**:  
+  👉 [https://nguyenvananit.github.io/my-next-jest-cicd/](https://nguyenvananit.github.io/my-next-jest-cicd/)
 
-## Deploy your own
+## 🔁 Quy trình CI/CD
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
+1. Push code lên GitHub
+2. GitHub Actions chạy:
+   - `npm ci`
+   - `npm run test` (Jest)
+   - `npm run build`
+   - `npx next export` để xuất ra static HTML
+3. Deploy tự động lên GitHub Pages
 
-## How to Use
+## 📦 Output
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Trang web đã được **build tĩnh hoàn toàn** (`output: 'export'`) và host trên GitHub Pages thông qua branch `gh-pages`.
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
+---
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
 
-## Running Tests
-
-```bash
-npm test
-```
-
-```bash
-yarn test
-```
-
-```bash
-pnpm test
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
