@@ -4,6 +4,12 @@ type Params = {
   };
 };
 
+export async function generateStaticParams() {
+  const slugs = ['hello-world', 'nextjs-guide', 'van-an'];
+
+  return slugs.map(slug => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Params) {
   return { title: `Post: ${params.slug}` };
 }
